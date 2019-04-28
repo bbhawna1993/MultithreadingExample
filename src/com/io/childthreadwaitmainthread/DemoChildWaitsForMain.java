@@ -7,11 +7,17 @@ class DemoChild implements Runnable
 	public void run() {
 		try
 		//calling the join method on main thread instance so that it waits for main 
-		//thread to complete exceution.
+		//thread to complete execution.
 		{mt.join();}
 		catch(InterruptedException e){}
 		for(int i=0;i<10;i++)
 		{
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("inside child thread");
 		}
 	}
@@ -31,11 +37,9 @@ public class DemoChildWaitsForMain {
 
 		for(int i=0;i<10;i++)
 		{
+			Thread.sleep(1000);
 			System.out.println("inside main thread");
 		}
-
-
-
 	}
 
 }
