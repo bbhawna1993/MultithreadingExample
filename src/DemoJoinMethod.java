@@ -16,7 +16,8 @@ public class DemoJoinMethod implements Runnable{
 		Thread t=new Thread(d);
 		t.start();
 
-		/*Main thread will wait for child thread to complete through join()
+		/*
+		 Main thread will wait for child thread to complete through join()
 		Since main thread is waiting on child thread,it will call the join()
 		on the thread on which it is waiting.
 		 */
