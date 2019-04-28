@@ -1,3 +1,4 @@
+/*Interrupt call is made when the thread enters into sleeping or waiting state.*/
 class DemoThread extends Thread{
 	@Override
 	public void run() {
@@ -12,7 +13,6 @@ class DemoThread extends Thread{
 			// TODO Auto-generated catch block
 			System.out.println("I got interrupted");
 		}
-
 	}
 }
 
@@ -22,6 +22,7 @@ public class InterruptedDemoForTargetThread {
 		DemoThread d=new DemoThread();
 		d.start();
 
+		//main thread interrupted child thread.
 		d.interrupt();
 
 		System.out.println("end of main thread");
@@ -29,3 +30,5 @@ public class InterruptedDemoForTargetThread {
 	}
 
 }
+
+
