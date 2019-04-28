@@ -14,6 +14,7 @@ public class DemoMultithreading extends Thread{
 	/*
 	 * even though we have overriden the start method,a new thread wil not be created.
 	 * now when we call super.start(),will call the run() method.
+	 * 
 	 * */
 
 	public void start()
@@ -26,10 +27,8 @@ public class DemoMultithreading extends Thread{
 	{
 		DemoMultithreading d=new DemoMultithreading();
 		d.start();
-        
-		System.out.println("main thread");
-		
 
+		System.out.println("main thread");
 	}
 
 }
