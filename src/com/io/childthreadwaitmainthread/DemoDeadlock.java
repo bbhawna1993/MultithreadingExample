@@ -13,7 +13,6 @@ class Mythread implements Runnable
 			//child thread waiting on main thread to execute
 			mt.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		for(int i=0;i<10;i++)
