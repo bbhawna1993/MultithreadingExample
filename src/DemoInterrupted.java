@@ -9,7 +9,7 @@ class Mythread implements Runnable
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.out.println("I got interrupted");
 			}
 		}
 
@@ -24,6 +24,10 @@ public class DemoInterrupted {
 		Thread t=new Thread(r);
 		t.start();
 
+		/*
+		 * main thread is interrupting child thread
+		 * interrupt method is usually called on sleep method
+		 */
 		t.interrupt();
 
 		for(int i=0;i<10;i++)
@@ -33,3 +37,8 @@ public class DemoInterrupted {
 	}
 
 }
+
+
+
+
+
