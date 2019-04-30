@@ -1,4 +1,4 @@
-package com.io.synchronizationdemo;
+package com.io.staticsynchronizationdemo.copy;
 
 public class SynchronizedDemo {
 
