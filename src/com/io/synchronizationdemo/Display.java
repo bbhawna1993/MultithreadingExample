@@ -2,6 +2,9 @@ package com.io.synchronizationdemo;
 
 public class Display {
 
+	/*this method is made synchronized to get the regular outputs
+	 * thus,we get the following output in regular format.
+	 */
 	public synchronized void wish(String name)
 	{
 		for(int i=0;i<10;i++)
